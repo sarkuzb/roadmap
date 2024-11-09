@@ -3,9 +3,9 @@ import ImageUp from "./assets/arrowhead-up.png";
 import { Informations } from "./data";
 import { ShowMoreInfo } from "./data";
 import { JavaScript } from "./data";
-import image01 from "./assets/video-tutorials/01.jpg";
 import { VideoTutorial } from "./videtutorials";
 import { VideoTutorialTwo } from "./videtutorials";
+import { ReactJs } from "./data";
 
 function Roadmap() {
   const [backToTop, setBackToTopButton] = useState(false);
@@ -48,6 +48,7 @@ function Roadmap() {
             </p>
           </div>
 
+          {/* roadmap */}
           {Informations.map((info) => (
             <div
               key={info.id}
@@ -76,6 +77,7 @@ function Roadmap() {
             </div>
           ))}
 
+          {/* roadmap */}
           <div
             className={`long-text transition-all duration-700 ease-in-out ${
               collapse ? "expanded" : ""
@@ -111,10 +113,10 @@ function Roadmap() {
             {JavaScript.map((info) => (
               <div
                 key={info.id}
-                className="border-2 border-yellow-600 rounded-xl p-4 m-4"
+                className="border-2 border-yellow-500 rounded-xl p-4 m-4"
               >
                 <div className="flex items-center justify-between">
-                  <p className="bg-white inline-block p-2 text-xl font-semibold text-yellow-600">
+                  <p className="bg-white inline-block p-2 text-xl font-semibold text-yellow-500">
                     {info.direction}
                   </p>
                   <p className="text-gray-300 text-xl font-semibold hover:text-gray-400 transition duration-150 cursor-pointer">
@@ -138,8 +140,43 @@ function Roadmap() {
                 </ul>
               </div>
             ))}
+            {ReactJs.map((info) => (
+              <div
+                key={info.id}
+                className="border-2 border-sky-500 rounded-xl p-4 m-4"
+              >
+                <div className="flex items-center justify-between">
+                  <p className="bg-white inline-block p-2 text-xl font-semibold text-sky-500">
+                    {info.direction}
+                  </p>
+                  <p className="text-gray-300 text-xl font-semibold hover:text-gray-400 transition duration-150 cursor-pointer">
+                    #main
+                  </p>
+                </div>
+                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                  <div className="flex flex-row justify-between">
+                    <div>
+                      {info.informa.map((item, index) => (
+                        <li key={index}>
+                          <span className="pr-1">•</span>
+                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </div>
+                    <img
+                      className="Image w-28 object-contain mr-32"
+                      src={info.image}
+                      alt=""
+                    />
+                  </div>
+                </ul>
+              </div>
+            ))}
           </div>
 
+          {/* show more less button */}
           <div className="bg-yellow-500 ml-4 border-b-2 border-yellow-600 active:scale-90 hover:border-slate-300 mb-2 p-2 rounded-md w-28 flex justify-center text-sm font-semibold text-white hover:bg-white active:bg-slate-200 hover:text-yellow-500 cursor-pointer transition duration-200">
             <button onClick={() => setCollapse((prevItem) => !prevItem)}>
               {collapse ? "Show Less" : "Show More"}
@@ -152,7 +189,7 @@ function Roadmap() {
               Video Tutorials
             </p>
           </div>
-
+          {/* video tutorials */}
           <div className="flex flex-col border-2 border-slate-500 rounded-xl p-4 m-4">
             {/* First Video Tutorial Section */}
             <div className="flex flex-wrap justify-evenly gap-2 m-2">
@@ -207,7 +244,7 @@ function Roadmap() {
             </div>
           </div>
 
-          {/* Toggle Button */}
+          {/* show more less button */}
           <div className="bg-yellow-500 border-b-2 border-yellow-600 hover:border-slate-300 active:scale-90 ml-4 mb-2 p-2 rounded-md w-28 flex justify-center text-sm font-semibold text-white hover:bg-white active:bg-slate-200 hover:text-yellow-500 cursor-pointer transition duration-200">
             <button onClick={() => setCollapseTwo((prevItem) => !prevItem)}>
               {collapseTwo ? "Show Less" : "Show More"}

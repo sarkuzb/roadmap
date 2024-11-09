@@ -33,7 +33,7 @@
 
 .expanded {
   opacity: 1;
-  max-height: 3000px;
+  max-height: 10000px;
 }
 
 .long-text-two {
@@ -45,7 +45,7 @@
 
 .expanded-two {
   opacity: 1;
-  max-height: 3000px; /* or any sufficiently large value */
+  max-height: 3000px;
 }
 
 .Texts-Main {

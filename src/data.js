@@ -7,6 +7,7 @@ import ImageSix from "./assets/essentials/tailwind.svg";
 import ImageSeven from "./assets/essentials/design.svg";
 import ImageEight from "./assets/essentials/document.svg";
 import jscript from "./assets/essentials/js.svg";
+import ReactImage from "./assets/essentials/react.png";
 
 export const Informations = [
   {
@@ -186,5 +187,25 @@ export const JavaScript = [
       "The Object.assign method for copying properties from one object to another",
     ],
     image: jscript,
+  },
+];
+
+export const ReactJs = [
+  {
+    id: 1,
+    direction: "React Js",
+    liId: 1,
+    informa: [
+      "Learn front-end development with React",
+      "Understand when and how to use React Components.",
+      "Learn to pass Props and work with them",
+      "Learn to write JSX and understand JSX syntax.",
+      "Learn about the React DOM.",
+      "Learn State Management in React.",
+      "Learn about React Hooks",
+      "Learn about conditional rendering in React",
+      "Understand the difference between class and functional components",
+    ],
+    image: ReactImage,
   },
 ];
