@@ -140,14 +140,14 @@ function Roadmap() {
             ))}
           </div>
 
-          <div className="bg-yellow-500 ml-4 mb-2 p-2 rounded-md w-28 flex justify-center text-sm font-semibold text-white hover:bg-white active:bg-slate-200 hover:text-yellow-500 cursor-pointer transition duration-200">
+          <div className="bg-yellow-500 ml-4 border-b-2 border-yellow-600 active:scale-90 hover:border-slate-300 mb-2 p-2 rounded-md w-28 flex justify-center text-sm font-semibold text-white hover:bg-white active:bg-slate-200 hover:text-yellow-500 cursor-pointer transition duration-200">
             <button onClick={() => setCollapse((prevItem) => !prevItem)}>
               {collapse ? "Show Less" : "Show More"}
             </button>
           </div>
 
           {/* video tutorials */}
-          <div className="flex  items-center justify-center pt-2 pb-4">
+          <div className="flex items-center justify-center pt-2 pb-4">
             <p className="text-yellow-600 bg-white p-2 font-bold text-2xl">
               Video Tutorials
             </p>
@@ -161,16 +161,16 @@ function Roadmap() {
                   key={info.link}
                   className="flex items-center justify-center bg-slate-300 p-4"
                 >
-                  <div className="flex flex-col border-2 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
+                  <div className="flex flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
                     <a
                       href={info.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full overflow-hidden rounded-t"
+                      className="w-full overflow-hidden"
                     >
                       <img src={info.thumbnail} alt="" className="w-full" />
                     </a>
-                    <p className="px-2 text-sm p-2 text-slate-800 font-semibold rounded-b bg-white overflow-hidden whitespace-nowrap text-ellipsis max-w-full">
+                    <p className="px-2 text-sm p-2 text-slate-800 font-semibold bg-white overflow-hidden whitespace-nowrap text-ellipsis max-w-full">
                       {info.name}
                     </p>
                   </div>
@@ -189,16 +189,16 @@ function Roadmap() {
                   key={info.id}
                   className="flex items-center justify-center bg-slate-300 p-4"
                 >
-                  <div className="flex flex-col border-2 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
+                  <div className="flex flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
                     <a
                       href={info.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full overflow-hidden rounded-t"
+                      className="w-full overflow-hidden"
                     >
                       <img src={info.thumbnail} alt="" className="w-full" />
                     </a>
-                    <p className="px-2 text-sm p-2 text-slate-800 font-semibold rounded-b bg-white overflow-hidden whitespace-nowrap text-ellipsis max-w-full">
+                    <p className="px-2 text-sm p-2 text-slate-800 font-semibold bg-white overflow-hidden whitespace-nowrap text-ellipsis max-w-full">
                       {info.name}
                     </p>
                   </div>
@@ -208,7 +208,7 @@ function Roadmap() {
           </div>
 
           {/* Toggle Button */}
-          <div className="bg-yellow-500 ml-4 mb-2 p-2 rounded-md w-28 flex justify-center text-sm font-semibold text-white hover:bg-white active:bg-slate-200 hover:text-yellow-500 cursor-pointer transition duration-200">
+          <div className="bg-yellow-500 border-b-2 border-yellow-600 hover:border-slate-300 active:scale-90 ml-4 mb-2 p-2 rounded-md w-28 flex justify-center text-sm font-semibold text-white hover:bg-white active:bg-slate-200 hover:text-yellow-500 cursor-pointer transition duration-200">
             <button onClick={() => setCollapseTwo((prevItem) => !prevItem)}>
               {collapseTwo ? "Show Less" : "Show More"}
             </button>
@@ -251,7 +251,7 @@ function Roadmap() {
                 href="https://t.me/sarvarkhujamov"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-white hover:text-transparent hover:bg-clip-text hover:text-sky-400"
+                className="underline text-white hover:text-transparent hover:bg-clip-text hover:text-sky-300"
               >
                 Sarvar Khujamov!
               </a>
