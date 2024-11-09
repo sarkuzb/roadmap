@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ImageUp from "./assets/arrowhead-up.png";
 import { Informations } from "./data";
 import { ShowMoreInfo } from "./data";
@@ -6,6 +6,7 @@ import { JavaScript } from "./data";
 import { VideoTutorial } from "./videtutorials";
 import { VideoTutorialTwo } from "./videtutorials";
 import { ReactJs } from "./data";
+import { NodeJs } from "./data";
 
 function Roadmap() {
   const [backToTop, setBackToTopButton] = useState(false);
@@ -33,21 +34,34 @@ function Roadmap() {
 
   const [collapse, setCollapse] = useState(false);
   const [collapseTwo, setCollapseTwo] = useState(false);
+
+  const videoSectionRef = useRef(null);
+
+  const scrollToVideoSection = () => {
+    videoSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       {/*this is body*/}
       <div className="Body">
-        <div className="Main bg-slate-200 pb-2">
-          {/* welcome to front end roadmap */}
-          <div className="flex  items-center justify-center pt-4">
-            <p className="bg-slate-400 inline-block p-4 text-white text-2xl font-light">
+        {/* welcome to front end roadmap */}
+        <div className="flex flex-row items-center justify-start p-2 bg-slate-500">
+          <div>
+            <p className="inline-block p-4 text-white text-2xl font-light">
               Welcome To Front-End{" "}
               <span className="text-yellow-600 bg-white p-1 font-bold">
                 Roadmap
               </span>
             </p>
           </div>
-
+          <button
+            className="text-md font-light text-slate-100 after-line after:bg-slate-200"
+            onClick={scrollToVideoSection}
+          >
+            Video Tutorials
+          </button>
+        </div>
+        <div className="Main bg-slate-200 pb-2 pt-2">
           {/* roadmap */}
           {Informations.map((info) => (
             <div
@@ -174,6 +188,40 @@ function Roadmap() {
                 </ul>
               </div>
             ))}
+            {NodeJs.map((info) => (
+              <div
+                key={info.id}
+                className="border-2 border-green-600 rounded-xl p-4 m-4"
+              >
+                <div className="flex items-center justify-between">
+                  <p className="bg-white inline-block p-2 text-xl font-semibold text-green-600">
+                    {info.direction}
+                  </p>
+                  <p className="text-gray-300 text-xl font-semibold hover:text-gray-400 transition duration-150 cursor-pointer">
+                    #main
+                  </p>
+                </div>
+                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                  <div className="flex flex-row justify-between">
+                    <div>
+                      {info.informa.map((item, index) => (
+                        <li key={index}>
+                          <span className="pr-1">•</span>
+                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </div>
+                    <img
+                      className="Image w-28 object-contain mr-32"
+                      src={info.image}
+                      alt=""
+                    />
+                  </div>
+                </ul>
+              </div>
+            ))}
           </div>
 
           {/* show more less button */}
@@ -184,7 +232,10 @@ function Roadmap() {
           </div>
 
           {/* video tutorials */}
-          <div className="flex items-center justify-center pt-2 pb-4">
+          <div
+            ref={videoSectionRef}
+            className="flex items-center justify-center pt-2 pb-4"
+          >
             <p className="text-yellow-600 bg-white p-2 font-bold text-2xl">
               Video Tutorials
             </p>
@@ -203,7 +254,7 @@ function Roadmap() {
                       href={info.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full overflow-hidden"
+                      className="w-full overflow-hidden "
                     >
                       <img src={info.thumbnail} alt="" className="w-full" />
                     </a>
@@ -288,7 +339,7 @@ function Roadmap() {
                 href="https://t.me/sarvarkhujamov"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-white hover:text-transparent hover:bg-clip-text hover:text-sky-300"
+                className="underline text-white hover:text-transparent hover:bg-clip-text hover:text-sky-400"
               >
                 Sarvar Khujamov!
               </a>

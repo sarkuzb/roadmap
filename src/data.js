@@ -8,6 +8,7 @@ import ImageSeven from "./assets/essentials/design.svg";
 import ImageEight from "./assets/essentials/document.svg";
 import jscript from "./assets/essentials/js.svg";
 import ReactImage from "./assets/essentials/react.png";
+import NodeImage from "./assets/essentials/node-js.png";
 
 export const Informations = [
   {
@@ -207,5 +208,26 @@ export const ReactJs = [
       "Understand the difference between class and functional components",
     ],
     image: ReactImage,
+  },
+];
+
+export const NodeJs = [
+  {
+    id: 1,
+    direction: "Node Js",
+    liId: 1,
+    informa: [
+      "Explore the components of back-end development, working with an MVC framework",
+      "Apply concepts like data types, objects, methods, objectoriented programming and classes in the context of backend development.",
+      "Server-Side JavaScript",
+      "Using Node on the command line.",
+      "NPM.",
+      "JavaScript Build Processes.",
+      "Event Loop and Emitters",
+      "File System Interaction",
+      "Modules",
+      "Native Node drivers",
+    ],
+    image: NodeImage,
   },
 ];
