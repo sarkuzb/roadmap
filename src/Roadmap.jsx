@@ -7,6 +7,7 @@ import { VideoTutorial } from "./videtutorials";
 import { VideoTutorialTwo } from "./videtutorials";
 import { ReactJs } from "./data";
 import { NodeJs } from "./data";
+import { gitAndgithub } from "./data";
 
 function Roadmap() {
   const [backToTop, setBackToTopButton] = useState(false);
@@ -212,6 +213,37 @@ function Roadmap() {
                   </p>
                   <p className="text-gray-300 text-xl font-semibold hover:text-gray-400 transition duration-150 cursor-pointer">
                     #main
+                  </p>
+                </div>
+                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                  <div className="flex flex-row justify-between">
+                    <div>
+                      {info.informa.map((item, index) => (
+                        <li key={index}>
+                          <span className="pr-1">•</span>
+                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                            {item}
+                          </span>
+                        </li>
+                      ))}
+                    </div>
+                    <img
+                      className="Image w-28 object-contain mr-32"
+                      src={info.image}
+                      alt=""
+                    />
+                  </div>
+                </ul>
+              </div>
+            ))}
+            {gitAndgithub.map((info) => (
+              <div
+                key={info.id}
+                className="border-2 border-slate-500 rounded-xl p-4 m-4"
+              >
+                <div className="flex items-center justify-between">
+                  <p className="bg-white inline-block p-2 text-xl font-semibold text-yellow-600">
+                    {info.direction}
                   </p>
                 </div>
                 <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">

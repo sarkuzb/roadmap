@@ -9,6 +9,7 @@ import ImageEight from "./assets/essentials/document.svg";
 import jscript from "./assets/essentials/js.svg";
 import ReactImage from "./assets/essentials/react.png";
 import NodeImage from "./assets/essentials/node-js.png";
+import Githubimage from "./assets/essentials/github.svg";
 
 export const Informations = [
   {
@@ -229,5 +230,33 @@ export const NodeJs = [
       "Native Node drivers",
     ],
     image: NodeImage,
+  },
+  {
+    id: 2,
+    direction: "Express Js",
+    liId: 2,
+    informa: [
+      "Understand how to install and use express in Node applications.",
+      "Creating Node and Express based servers.",
+      "RESTful Routing with Express.",
+      "Understand and use middleware for Node applications.",
+    ],
+    image: NodeImage,
+  },
+];
+
+export const gitAndgithub = [
+  {
+    id: 1,
+    direction: "Git, Github And Version Constrol",
+    liId: 1,
+    informa: [
+      "Using git for version control and collaboration",
+      "Git forking, branching and cloning",
+      "Using GitHub as a remote repository",
+      "Checkout and rolling back changes with git",
+      "Using git and GitHub with Xcode",
+    ],
+    image: Githubimage,
   },
 ];

@@ -13,6 +13,12 @@ import thumbnail12 from "./assets/video-tutorials/12.jpg";
 import thumbnail13 from "./assets/video-tutorials/13.jpg";
 import thumbnail14 from "./assets/video-tutorials/14.jpg";
 import thumbnail15 from "./assets/video-tutorials/15.jpg";
+import thumbnail16 from "./assets/video-tutorials/16.jpg";
+import thumbnail17 from "./assets/video-tutorials/17.jpg";
+import thumbnail18 from "./assets/video-tutorials/18.jpg";
+import thumbnail19 from "./assets/video-tutorials/19.jpg";
+import thumbnail20 from "./assets/video-tutorials/20.jpg";
+import thumbnail21 from "./assets/video-tutorials/21.jpg";
 
 export const VideoTutorial = [
   {
@@ -107,5 +113,41 @@ export const VideoTutorialTwo = [
     link: "https://youtu.be/f2EqECiTBL8?si=xpX1ZoblMJ039PFp",
     name: "Node.js Full Course for Beginners | Complete All-in-One Tutorial | 7 Hours",
     thumbnail: thumbnail15,
+  },
+  {
+    id: 16,
+    link: "https://youtu.be/SccSCuHhOw0?si=GhtdRIfodalp2-mN",
+    name: "Learn Express JS In 35 Minutes",
+    thumbnail: thumbnail16,
+  },
+  {
+    id: 17,
+    link: "https://youtu.be/0QRFOsrBtXw?si=7Nuuq99W3GZG32Ci",
+    name: "What Is Express JS? | Express JS Tutorial for Beginners 2022 | Express JS API | Simplilearn",
+    thumbnail: thumbnail17,
+  },
+  {
+    id: 18,
+    link: "https://youtu.be/jivyItmsu18?si=4VhgQGKhvo4zhEnw",
+    name: "Introduction to Express JS | Express & Node.js Tutorials for Beginners",
+    thumbnail: thumbnail18,
+  },
+  {
+    id: 19,
+    link: "https://youtu.be/RGOj5yH7evk?si=7fPGLCc-fn8c_Mex",
+    name: "Git and GitHub for Beginners - Crash Course",
+    thumbnail: thumbnail19,
+  },
+  {
+    id: 20,
+    link: "https://youtu.be/8JJ101D3knE?si=B5-Un-sTCXfLWpW3",
+    name: "Git Tutorial for Beginners: Learn Git in 1 Hour",
+    thumbnail: thumbnail20,
+  },
+  {
+    id: 21,
+    link: "https://youtu.be/hrTQipWp6co?si=HqSPO8lBm9eG7ZFl",
+    name: "Git and GitHub - 0 Experience to Professional in 1 Tutorial (Part 1)",
+    thumbnail: thumbnail21,
   },
 ];
