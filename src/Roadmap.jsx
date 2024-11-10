@@ -36,9 +36,14 @@ function Roadmap() {
   const [collapseTwo, setCollapseTwo] = useState(false);
 
   const videoSectionRef = useRef(null);
+  const installationsSectionRef = useRef(null);
 
   const scrollToVideoSection = () => {
     videoSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const scrollToInstallationsSection = () => {
+    installationsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <>
@@ -54,12 +59,20 @@ function Roadmap() {
               </span>
             </p>
           </div>
-          <button
-            className="text-md font-light text-slate-100 after-line after:bg-slate-200"
-            onClick={scrollToVideoSection}
-          >
-            Video Tutorials
-          </button>
+          <div className="flex gap-4">
+            <button
+              className="text-md font-light text-slate-100 after-line after:bg-slate-200"
+              onClick={scrollToVideoSection}
+            >
+              Video Tutorials
+            </button>
+            <button
+              className="text-md font-light text-slate-100 after-line after:bg-slate-200"
+              onClick={scrollToInstallationsSection}
+            >
+              Installations
+            </button>
+          </div>
         </div>
         <div className="Main bg-slate-200 pb-2 pt-2">
           {/* roadmap */}
@@ -302,7 +315,10 @@ function Roadmap() {
             </button>
           </div>
 
-          <div className="flex items-center justify-center pt-2 pb-4">
+          <div
+            ref={installationsSectionRef}
+            className="flex items-center justify-center pt-2 pb-4"
+          >
             <p className="text-yellow-600 bg-white p-2 font-bold text-2xl">
               Installations
             </p>
