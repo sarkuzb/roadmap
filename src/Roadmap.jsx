@@ -301,6 +301,12 @@ function Roadmap() {
               {collapseTwo ? "Show Less" : "Show More"}
             </button>
           </div>
+
+          <div className="flex items-center justify-center pt-2 pb-4">
+            <p className="text-yellow-600 bg-white p-2 font-bold text-2xl">
+              Installations
+            </p>
+          </div>
         </div>
 
         {/* back to top button */}
