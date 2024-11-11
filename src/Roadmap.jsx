@@ -37,15 +37,11 @@ function Roadmap() {
   const [collapseTwo, setCollapseTwo] = useState(false);
 
   const videoSectionRef = useRef(null);
-  const installationsSectionRef = useRef(null);
 
   const scrollToVideoSection = () => {
     videoSectionRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToInstallationsSection = () => {
-    installationsSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <>
       {/*this is body*/}
@@ -66,12 +62,6 @@ function Roadmap() {
               onClick={scrollToVideoSection}
             >
               Video Tutorials
-            </button>
-            <button
-              className="text-md font-light text-slate-100 after-line after:bg-slate-200"
-              onClick={scrollToInstallationsSection}
-            >
-              Installations
             </button>
           </div>
         </div>
@@ -345,15 +335,6 @@ function Roadmap() {
             <button onClick={() => setCollapseTwo((prevItem) => !prevItem)}>
               {collapseTwo ? "Show Less" : "Show More"}
             </button>
-          </div>
-
-          <div
-            ref={installationsSectionRef}
-            className="flex items-center justify-center pt-2 pb-4"
-          >
-            <p className="text-yellow-600 bg-white p-2 font-bold text-2xl">
-              Installations
-            </p>
           </div>
         </div>
 

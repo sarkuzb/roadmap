@@ -17,7 +17,7 @@ export const Informations = [
     direction: "Web Development Fundamentals",
     liId: 1,
     informa: [
-      "Understand how websites work and how HTML, CSS, and JavaScript contribute.",
+      "Understand how websites work and how HTML, CSS and JavaScript contribute.",
       "Understand how the internet works and how websites are served.",
       "Learn to use git, GitHub and version control.",
       "Learn key troubleshooting and debugging skills to apply to your projects",
