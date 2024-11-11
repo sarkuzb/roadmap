@@ -47,7 +47,7 @@ function Roadmap() {
       {/*this is body*/}
       <div className="Body">
         {/* welcome to front end roadmap */}
-        <div className="flex flex-row items-center justify-start p-2 bg-slate-500">
+        <div className="flex flex-col sm:flex-row items-center justify-start p-2 bg-slate-500">
           <div className="">
             <p className="inline-block p-4 text-white text-2xl font-light">
               Welcome To Front-End{" "}
@@ -65,7 +65,7 @@ function Roadmap() {
             </button>
           </div>
         </div>
-        <div className="Main xl:w-5/7 lg:w-5/6 md:w-4/5 sm:w-3/4 max-sm:w-2/3 max-md:w-2/4 max-lg:w-2/4 max-xl:w-2/4 bg-slate-200 pb-2 pt-2">
+        <div className="Main mx-auto max-w-full 2xl:w-10/12 xl:w-10/12 lg:w-10/12 md:w-10/12 sm:w-10/12  bg-slate-200 pb-2 pt-2">
           {/* roadmap */}
           {Informations.map((info) => (
             <div
@@ -78,7 +78,7 @@ function Roadmap() {
                 </p>
               </div>
               <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
-                <div className="flex flex-row justify-between">
+                <div className="flex flex-col items-center md:flex-row justify-between">
                   <div>
                     {info.informa.map((item, index) => (
                       <li key={index}>
@@ -89,7 +89,13 @@ function Roadmap() {
                       </li>
                     ))}
                   </div>
-                  <img className="Image w-20 mr-32" src={info.image} alt="" />
+                  <div className="sm:flex sm:justify-center md:flex md:items-center lg:mr-10 sm:mr-5">
+                    <img
+                      className="Image w-10 my-4 md:mt-0 sm:w-10 md:w-12"
+                      src={info.image}
+                      alt=""
+                    />
+                  </div>
                 </div>
               </ul>
             </div>
@@ -123,7 +129,13 @@ function Roadmap() {
                         </li>
                       ))}
                     </div>
-                    <img className="Image w-20 mr-32" src={info.image} alt="" />
+                    <div className="sm:flex sm:justify-center md:flex md:items-center lg:mr-10 sm:mr-5">
+                      <img
+                        className="Image w-10 my-4 md:mt-0 sm:w-10 md:w-12"
+                        src={info.image}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </ul>
               </div>
@@ -153,7 +165,13 @@ function Roadmap() {
                         </li>
                       ))}
                     </div>
-                    <img className="Image w-20 mr-32" src={info.image} alt="" />
+                    <div className="sm:flex sm:justify-center md:flex md:items-center lg:mr-10 sm:mr-5">
+                      <img
+                        className="Image w-10 my-4 md:mt-0 sm:w-10 md:w-12"
+                        src={info.image}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </ul>
               </div>
@@ -183,11 +201,13 @@ function Roadmap() {
                         </li>
                       ))}
                     </div>
-                    <img
-                      className="Image w-28 object-contain mr-32"
-                      src={info.image}
-                      alt=""
-                    />
+                    <div className="sm:flex sm:justify-center md:flex md:items-center lg:mr-10 sm:mr-5">
+                      <img
+                        className="Image w-10 my-4 md:mt-0 sm:w-10 md:w-12"
+                        src={info.image}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </ul>
               </div>
@@ -217,11 +237,13 @@ function Roadmap() {
                         </li>
                       ))}
                     </div>
-                    <img
-                      className="Image w-28 object-contain mr-32"
-                      src={info.image}
-                      alt=""
-                    />
+                    <div className="sm:flex sm:justify-center md:flex md:items-center lg:mr-10 sm:mr-5">
+                      <img
+                        className="Image w-10 my-4 md:mt-0 sm:w-10 md:w-12"
+                        src={info.image}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </ul>
               </div>
@@ -248,11 +270,13 @@ function Roadmap() {
                         </li>
                       ))}
                     </div>
-                    <img
-                      className="Image w-28 object-contain mr-32"
-                      src={info.image}
-                      alt=""
-                    />
+                    <div className="sm:flex sm:justify-center md:flex md:items-center lg:mr-10 sm:mr-5">
+                      <img
+                        className="Image w-10 my-4 md:mt-0 sm:w-10 md:w-12"
+                        src={info.image}
+                        alt=""
+                      />
+                    </div>
                   </div>
                 </ul>
               </div>
@@ -282,14 +306,14 @@ function Roadmap() {
               {VideoTutorial.map((info) => (
                 <div
                   key={info.link}
-                  className="flex items-center justify-center bg-slate-300 p-4"
+                  className="flex sm:w-5/12 md:w-5/12 lg:w-3/12 xl:w-3/12 2xl:w-3/12 items-center justify-center bg-slate-300 p-4 sm:p-2 lg:p-3 2xl:p-4"
                 >
-                  <div className="flex flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
+                  <div className="flex sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full  flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
                     <a
                       href={info.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full overflow-hidden "
+                      className="w-full overflow-hidden"
                     >
                       <img src={info.thumbnail} alt="" className="w-full" />
                     </a>
@@ -310,9 +334,9 @@ function Roadmap() {
               {VideoTutorialTwo.map((info) => (
                 <div
                   key={info.id}
-                  className="flex items-center justify-center bg-slate-300 p-4"
+                  className="flex sm:w-5/12 md:w-5/12 lg:w-3/12 xl:w-1/4 2xl:w-1/4 items-center justify-center bg-slate-300 p-4"
                 >
-                  <div className="flex flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
+                  <div className="flex sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
                     <a
                       href={info.link}
                       target="_blank"
@@ -341,7 +365,7 @@ function Roadmap() {
         {/* back to top button */}
         {backToTop && (
           <div
-            className={`fixed bottom-10 right-11 transition-all duration-500 ease-in-out ${
+            className={`sm:right-3 md:right-5 lg:right-8 lg:bottom-20 xl:right-9 xl:bottom-10 2xl:right-10 2xl:bottom-10 fixed bottom-10 right-11 transition-all duration-500 ease-in-out ${
               backToTop ? "opacity-100 visible" : "opacity-0 invisible"
             }`}
           >
@@ -355,11 +379,11 @@ function Roadmap() {
         )}
 
         {/* bottom */}
-        <div className="Bottom flex flex-col items-center justify-center p-2 bg-slate-500">
-          <p className="text-white font-semibold">
+        <div className="Bottom flex flex-col items-center justify-center p-4 bg-slate-500">
+          <p className="text-white font-semibold text-center text-sm sm:text-base lg:text-lg">
             This is a <span className="uppercase underline">roadmap</span> for
-            those who don't know where to start with front end. The web site was
-            created by{" "}
+            those who don't know where to start with front-end development. The
+            website was created by{" "}
             <a
               href="https://tmci.uz/"
               target="_blank"
@@ -374,15 +398,17 @@ function Roadmap() {
                 href="https://t.me/sarvarkhujamov"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline text-white hover:text-transparent hover:bg-clip-text hover:text-sky-400"
+                className="text-white hover:text-transparent hover:bg-clip-text hover:text-sky-400"
               >
                 Sarvar Khujamov!
               </a>
             </span>
           </p>
 
-          {/* Corrected copyright line */}
-          <p className="font-light text-white">© 2024 All rights reserved.</p>
+          {/* Copyright line */}
+          <p className="font-light text-white text-xs sm:text-sm mt-2 text-center">
+            © 2024 All rights reserved.
+          </p>
         </div>
       </div>
     </>
