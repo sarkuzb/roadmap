@@ -48,7 +48,7 @@ function Roadmap() {
       <div className="Body">
         {/* welcome to front end roadmap */}
         <div className="flex flex-row items-center justify-start p-2 bg-slate-500">
-          <div>
+          <div className="">
             <p className="inline-block p-4 text-white text-2xl font-light">
               Welcome To Front-End{" "}
               <span className="text-yellow-600 bg-white p-1 font-bold">
@@ -65,7 +65,7 @@ function Roadmap() {
             </button>
           </div>
         </div>
-        <div className="Main bg-slate-200 pb-2 pt-2">
+        <div className="Main xl:w-5/7 lg:w-5/6 md:w-4/5 sm:w-3/4 max-sm:w-2/3 max-md:w-2/4 max-lg:w-2/4 max-xl:w-2/4 bg-slate-200 pb-2 pt-2">
           {/* roadmap */}
           {Informations.map((info) => (
             <div
