@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from "react";
-import ImageUp from "./assets/arrowhead-up.png";
+import { useState } from "react";
 import { Informations } from "./data";
 import { ShowMoreInfo } from "./data";
 import { JavaScript } from "./data";
@@ -9,62 +8,24 @@ import { ReactJs } from "./data";
 import { NodeJs } from "./data";
 import { gitAndgithub } from "./data";
 
+import BackToTopProvider from "./context/backToTop";
+import BackToTopHere from "./components/backToTopButton";
+
+import { Header, VideoTutorials } from "./components/header";
+import VideoScrollProvider from "./context/videosectionscroll";
+
+import Bottom from "./components/bottom";
+
 function Roadmap() {
-  const [backToTop, setBackToTopButton] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener(
-      "scroll",
-      () => {
-        if (window.scrollY > 700) {
-          setBackToTopButton(true);
-        } else {
-          setBackToTopButton(false);
-        }
-      },
-      []
-    );
-  });
-
-  const toTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   const [collapse, setCollapse] = useState(false);
   const [collapseTwo, setCollapseTwo] = useState(false);
 
-  const videoSectionRef = useRef(null);
-
-  const scrollToVideoSection = () => {
-    videoSectionRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <>
+    <VideoScrollProvider>
       {/*this is body*/}
       <div className="Body">
-        {/* welcome to front end roadmap */}
-        <div className="flex flex-col sm:flex-row items-center justify-start p-2 bg-slate-500">
-          <div className="">
-            <p className="inline-block p-4 text-white text-2xl font-light">
-              Welcome To Front-End{" "}
-              <span className="text-yellow-600 bg-white p-1 font-bold">
-                Roadmap
-              </span>
-            </p>
-          </div>
-          <div className="flex gap-4">
-            <button
-              className="text-md font-light text-slate-100 after-line after:bg-slate-200"
-              onClick={scrollToVideoSection}
-            >
-              Video Tutorials
-            </button>
-          </div>
-        </div>
+        {/* header */}
+        <Header />
         <div className="Main mx-auto max-w-full 2xl:w-10/12 xl:w-10/12 lg:w-10/12 md:w-10/12 sm:w-10/12  bg-slate-200 pb-2 pt-2">
           {/* roadmap */}
           {Informations.map((info) => (
@@ -291,14 +252,7 @@ function Roadmap() {
           </div>
 
           {/* video tutorials */}
-          <div
-            ref={videoSectionRef}
-            className="flex items-center justify-center pt-2 pb-4"
-          >
-            <p className="text-yellow-600 bg-white p-2 font-bold text-2xl">
-              Video Tutorials
-            </p>
-          </div>
+          <VideoTutorials />
           {/* video tutorials */}
           <div className="flex flex-col border-2 border-slate-500 rounded-xl p-4 m-4">
             {/* First Video Tutorial Section */}
@@ -363,55 +317,16 @@ function Roadmap() {
         </div>
 
         {/* back to top button */}
-        {backToTop && (
-          <div
-            className={`sm:right-3 md:right-5 lg:right-8 lg:bottom-20 xl:right-9 xl:bottom-10 2xl:right-10 2xl:bottom-10 fixed bottom-10 right-11 transition-all duration-500 ease-in-out ${
-              backToTop ? "opacity-100 visible" : "opacity-0 invisible"
-            }`}
-          >
-            <img
-              className="w-10 cursor-pointer opacity-35 hover:opacity-50"
-              src={ImageUp}
-              alt="up"
-              onClick={toTop}
-            />
+        <BackToTopProvider>
+          <div>
+            <BackToTopHere />
           </div>
-        )}
+        </BackToTopProvider>
 
         {/* bottom */}
-        <div className="Bottom flex flex-col items-center justify-center p-4 bg-slate-500">
-          <p className="text-white font-semibold text-center text-sm sm:text-base lg:text-lg">
-            This is a <span className="uppercase underline">roadmap</span> for
-            those who don't know where to start with front-end development. The
-            website was created by{" "}
-            <a
-              href="https://tmci.uz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-red-700"
-            >
-              TMCI
-            </a>{" "}
-            Student{" "}
-            <span className="underline">
-              <a
-                href="https://t.me/sarvarkhujamov"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-white hover:text-transparent hover:bg-clip-text hover:text-sky-400"
-              >
-                Sarvar Khujamov!
-              </a>
-            </span>
-          </p>
-
-          {/* Copyright line */}
-          <p className="font-light text-white text-xs sm:text-sm mt-2 text-center">
-            © 2024 All rights reserved.
-          </p>
-        </div>
+        <Bottom />
       </div>
-    </>
+    </VideoScrollProvider>
   );
 }
 
