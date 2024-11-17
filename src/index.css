@@ -2,8 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --highlight-bg: rgb(100 116 139);
+  --Main-bg: rgb(226 232 240);
+  --Ulli-bg: rgb(203 213 225);
+  --Image-opacity: 1;
+  --UlliText-color: rgb(71 85 105);
+  --UlliText-hover-color: rgb(30 41 59);
+}
+
+[data-theme="dark"] {
+  --bg-color: #414141;
+  --text-color: #f5f5f5;
+  --highlight-bg: rgb(40, 40, 40);
+  --Main-bg: rgb(52, 52, 49);
+  --Ulli-bg: #414141;
+  --Image-opacity: 0.3;
+  --UlliText-color: rgb(203, 203, 203);
+  --UlliText-hover-color: rgb(255, 255, 255);
+}
+
+.highlight {
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+  padding: 0.25rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Bottom {
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+  padding: 0.25rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Main {
+  background-color: var(--Main-bg);
+  color: var(--highlight-text);
+  padding: 0.25rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Ulli {
+  background-color: var(--Ulli-bg);
+  color: var(--highlight-text);
+  transition: background-color 0.3s ease, color 100ms;
+}
+
+.UlliText {
+  color: var(--UlliText-color);
+}
+
+.UlliText:hover {
+  color: var(--UlliText-hover-color);
+}
+
 .Body {
   margin: auto;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .Main {
@@ -13,6 +76,8 @@
 
 .Image {
   animation: rotateImage 11s linear infinite;
+  opacity: var(--Image-opacity);
+  transition: opacity 0.3s ease;
 }
 
 @keyframes rotateImage {

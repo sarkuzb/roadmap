@@ -1,11 +1,21 @@
-import React, { useContext } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { ScrollRef } from "../context/videosectionscroll";
 
 const Header = () => {
   const { scrollToVideoSection } = useContext(ScrollRef);
+
+  const [theme, setTheme] = useState("light");
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(theme === "light" ? "dark" : "light");
+  };
   return (
     <>
-      <div className="flex flex-col sm:flex-row items-center justify-start p-2 bg-slate-500">
+      <div className="flex flex-col sm:flex-row items-center justify-start p-2 bg-slate-500 highlight">
         <div className="">
           <p className="inline-block p-4 text-white text-2xl font-light">
             Welcome To Front-End{" "}
@@ -15,15 +25,25 @@ const Header = () => {
           </p>
         </div>
         <div className="flex gap-4">
-          <button
-            className="text-md font-light text-slate-100 after-line after:bg-slate-200"
-            onClick={scrollToVideoSection}
-          >
-            Video Tutorials
-          </button>
+          <div>
+            <button
+              className="text-md font-light text-slate-100 after-line after:bg-slate-200"
+              onClick={scrollToVideoSection}
+            >
+              Video Tutorials
+            </button>
+          </div>
+
+          <div className="absolute right-6">
+            <button
+              onClick={toggleTheme}
+              className="font-semibold text-xs text-slate-200 hover:text-white"
+            >
+              {theme === "light" ? "Dark" : "Light"}
+            </button>
+          </div>
         </div>
       </div>
-      ;
     </>
   );
 };

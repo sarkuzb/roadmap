@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Informations } from "./data";
 import { ShowMoreInfo } from "./data";
 import { JavaScript } from "./data";
 import { VideoTutorial } from "./videtutorials";
@@ -13,6 +12,8 @@ import BackToTopHere from "./components/backToTopButton";
 
 import { Header, VideoTutorials } from "./components/header";
 import VideoScrollProvider from "./context/videosectionscroll";
+
+import Info from "./components/information";
 
 import Bottom from "./components/bottom";
 
@@ -28,39 +29,7 @@ function Roadmap() {
         <Header />
         <div className="Main mx-auto max-w-full 2xl:w-10/12 xl:w-10/12 lg:w-10/12 md:w-10/12 sm:w-10/12  bg-slate-200 pb-2 pt-2">
           {/* roadmap */}
-          {Informations.map((info) => (
-            <div
-              key={info.id}
-              className="border-2 border-slate-500 rounded-xl p-4 m-4"
-            >
-              <div>
-                <p className="bg-white inline-block p-2 text-xl font-semibold text-yellow-600">
-                  {info.direction}
-                </p>
-              </div>
-              <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
-                <div className="flex flex-col items-center md:flex-row justify-between">
-                  <div>
-                    {info.informa.map((item, index) => (
-                      <li key={index}>
-                        <span className="pr-1">•</span>
-                        <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </div>
-                  <div className="sm:flex sm:justify-center md:flex md:items-center lg:mr-10 sm:mr-5">
-                    <img
-                      className="Image w-10 my-4 md:mt-0 sm:w-10 md:w-12"
-                      src={info.image}
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </ul>
-            </div>
-          ))}
+          <Info />
 
           {/* roadmap */}
           <div
@@ -78,7 +47,7 @@ function Roadmap() {
                     {info.direction}
                   </p>
                 </div>
-                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                <ul className="Ulli mt-4 p-2 text-slate-600 font-light">
                   <div className="flex flex-row justify-between">
                     <div>
                       {info.informa.map((item, index) => (
@@ -114,7 +83,7 @@ function Roadmap() {
                     #main
                   </p>
                 </div>
-                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                <ul className="Ulli mt-4 p-2 text-slate-600 font-light">
                   <div className="flex flex-row justify-between">
                     <div>
                       {info.informa.map((item, index) => (
@@ -150,7 +119,7 @@ function Roadmap() {
                     #main
                   </p>
                 </div>
-                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                <ul className="Ulli mt-4 p-2 text-slate-600 font-light">
                   <div className="flex flex-row justify-between">
                     <div>
                       {info.informa.map((item, index) => (
@@ -186,7 +155,7 @@ function Roadmap() {
                     #main
                   </p>
                 </div>
-                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                <ul className="Ulli mt-4 p-2 text-slate-600 font-light">
                   <div className="flex flex-row justify-between">
                     <div>
                       {info.informa.map((item, index) => (
@@ -219,7 +188,7 @@ function Roadmap() {
                     {info.direction}
                   </p>
                 </div>
-                <ul className="bg-slate-300 mt-4 p-2 text-slate-600 font-light">
+                <ul className="Ulli mt-4 p-2 text-slate-600 font-light">
                   <div className="flex flex-row justify-between">
                     <div>
                       {info.informa.map((item, index) => (
@@ -260,7 +229,7 @@ function Roadmap() {
               {VideoTutorial.map((info) => (
                 <div
                   key={info.link}
-                  className="flex sm:w-5/12 md:w-5/12 lg:w-3/12 xl:w-3/12 2xl:w-3/12 items-center justify-center bg-slate-300 p-4 sm:p-2 lg:p-3 2xl:p-4"
+                  className="flex sm:w-5/12 md:w-5/12 lg:w-3/12 xl:w-3/12 2xl:w-3/12 items-center justify-center Ulli bg-slate-300 p-4 sm:p-2 lg:p-3 2xl:p-4"
                 >
                   <div className="flex sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full  flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
                     <a
@@ -288,7 +257,7 @@ function Roadmap() {
               {VideoTutorialTwo.map((info) => (
                 <div
                   key={info.id}
-                  className="flex sm:w-5/12 md:w-5/12 lg:w-3/12 xl:w-1/4 2xl:w-1/4 items-center justify-center bg-slate-300 p-4"
+                  className="flex sm:w-5/12 md:w-5/12 lg:w-3/12 xl:w-1/4 2xl:w-1/4 items-center justify-center Ulli bg-slate-300 p-4"
                 >
                   <div className="flex sm:w-full md:w-full lg:w-full xl:w-full 2xl:w-full flex-col border-4 rounded border-white max-w-xs hover:scale-105 hover:shadow-xl hover:shadow-black/30 transition duration-100">
                     <a
