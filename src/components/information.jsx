@@ -19,7 +19,7 @@ const Info = () => (
               {info.informa.map((item, index) => (
                 <li key={index}>
                   <span className="pr-1">•</span>
-                  <span className="hover:text-slate-800 UlliText hover:font-semibold transition-all duration-100 cursor-pointer">
+                  <span className="UlliText hover:font-semibold transition-all duration-100 cursor-pointer">
                     {item}
                   </span>
                 </li>

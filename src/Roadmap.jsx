@@ -53,7 +53,7 @@ function Roadmap() {
                       {info.informa.map((item, index) => (
                         <li key={index}>
                           <span className="pr-1">•</span>
-                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                          <span className="UlliText hover:font-semibold transition-all duration-100 cursor-pointer">
                             {item}
                           </span>
                         </li>
@@ -89,7 +89,7 @@ function Roadmap() {
                       {info.informa.map((item, index) => (
                         <li key={index}>
                           <span className="pr-1">•</span>
-                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                          <span className="UlliText hover:font-semibold transition-all duration-100 cursor-pointer">
                             {item}
                           </span>
                         </li>
@@ -125,7 +125,7 @@ function Roadmap() {
                       {info.informa.map((item, index) => (
                         <li key={index}>
                           <span className="pr-1">•</span>
-                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                          <span className="UlliText hover:font-semibold transition-all duration-100 cursor-pointer">
                             {item}
                           </span>
                         </li>
@@ -161,7 +161,7 @@ function Roadmap() {
                       {info.informa.map((item, index) => (
                         <li key={index}>
                           <span className="pr-1">•</span>
-                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                          <span className="UlliText hover:font-semibold transition-all duration-100 cursor-pointer">
                             {item}
                           </span>
                         </li>
@@ -194,7 +194,7 @@ function Roadmap() {
                       {info.informa.map((item, index) => (
                         <li key={index}>
                           <span className="pr-1">•</span>
-                          <span className="hover:text-slate-800 hover:font-semibold transition-all duration-100 cursor-pointer">
+                          <span className="UlliText hover:font-semibold transition-all duration-100 cursor-pointer">
                             {item}
                           </span>
                         </li>
