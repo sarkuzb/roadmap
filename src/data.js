@@ -10,6 +10,7 @@ import jscript from "./assets/essentials/js.svg";
 import ReactImage from "./assets/essentials/react.png";
 import NodeImage from "./assets/essentials/node-js.png";
 import Githubimage from "./assets/essentials/github.svg";
+import API from "./assets/essentials/api.svg";
 
 export const Informations = [
   {
@@ -258,5 +259,23 @@ export const gitAndgithub = [
       "Using git and GitHub with Xcode",
     ],
     image: Githubimage,
+  },
+];
+
+export const APIs = [
+  {
+    id: 1,
+    direction: "Application Program Interfaces",
+    liId: 1,
+    informa: [
+      "Understand what APIs are and how they work.",
+      "HTTP in Depth",
+      "Calling APIs",
+      "Reading API documentation",
+      "Basic API Authentication",
+      "Server to server communication",
+      "JSON vs. XML, sending data over the wire.",
+    ],
+    image: API,
   },
 ];

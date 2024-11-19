@@ -5,7 +5,7 @@ const Info = () => (
     {Informations.map((info) => (
       <div
         key={info.id}
-        className="border-2 border-slate-500 rounded-xl p-4 m-4"
+        className="border-colors border-2 border-slate-500 rounded-xl p-4 m-4"
       >
         <div>
           <p className="bg-white inline-block p-2 text-xl font-semibold text-yellow-600">

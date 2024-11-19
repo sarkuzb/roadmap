@@ -11,6 +11,7 @@
   --Image-opacity: 1;
   --UlliText-color: rgb(71 85 105);
   --UlliText-hover-color: rgb(30 41 59);
+  --border-colors-border-color: #64748b;
 }
 
 [data-theme="dark"] {
@@ -22,6 +23,7 @@
   --Image-opacity: 0.3;
   --UlliText-color: rgb(203, 203, 203);
   --UlliText-hover-color: rgb(255, 255, 255);
+  --border-colors-border-color: #d3d3d3;
 }
 
 .highlight {
@@ -30,6 +32,11 @@
   padding: 0.25rem;
   font-weight: bold;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.border-colors {
+  border-color: var(--border-colors-border-color);
+  transition: 0.3s ease, color 0.3s ease;
 }
 
 .Bottom {
