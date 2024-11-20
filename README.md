@@ -5,4 +5,4 @@ Welcome to Roadmap! 🎉 This project is your comprehensive guide to mastering F
 # Deployed Features:
 - Responsive Design
 - Data importings
-- Dark And Light Modes
+- Dark And Light Mode
