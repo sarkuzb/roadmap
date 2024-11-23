@@ -9,5 +9,3 @@ Welcome to Roadmap! 🎉 This project is your comprehensive guide to mastering F
 - Responsive Design
 - Data importings
 - Dark And Light Modes
-
-Something
