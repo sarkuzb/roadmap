@@ -18,7 +18,7 @@ const Header = () => {
       <div className="flex flex-col sm:flex-row items-center justify-start p-2 bg-slate-500 highlight">
         <div className="">
           <p className="inline-block p-4 text-white text-2xl font-light">
-            Welcome To Front-End{" "}
+            Welcome To{" "}
             <span className="text-yellow-600 bg-white p-1 font-bold">
               Roadmap
             </span>
