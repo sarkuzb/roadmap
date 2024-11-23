@@ -19,7 +19,7 @@ const Bottom = () => {
             href="https://t.me/sarvarkhujamov"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-white hover:text-transparent hover:bg-clip-text hover:text-sky-400"
+            className="text-white hover:text-gray-400"
           >
             Sarvar Khujamov!
           </a>
